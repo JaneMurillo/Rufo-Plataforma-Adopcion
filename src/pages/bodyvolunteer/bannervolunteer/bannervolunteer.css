@@ -1,0 +1,22 @@
+.banner-volunteer {
+  background-image: linear-gradient(
+      to right,
+      rgba(86, 167, 220, 100%),
+      rgba(134, 193, 229, 0%) 70%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(125, 190, 225, 100%),
+      rgba(125, 191, 226, 0%) 25%
+    ),
+    url('./adorable-kitty-with-monochrome-wall-behind-her.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 15vh 10vw;
+  min-height: 300px;
+  background-position: left top;
+}
+
+.h1-banner-volunteer {
+  margin-top: 110px;
+}

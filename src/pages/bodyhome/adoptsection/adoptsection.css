@@ -1,0 +1,22 @@
+.adoptsection-container {
+    background: linear-gradient(to bottom, white, #FAF1EA);
+    padding: 10% 5%; /* Top right bottom left */
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 80px; /* Round edge */
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards-container-div-home{
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 4vw;
+}

@@ -1,0 +1,14 @@
+.userstable-container {
+  gap: 2vw;
+  padding: 6vh 4vw;
+  margin-bottom: 40px;
+}
+
+.userstable-table {
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.col-center {
+  text-align: center;
+}

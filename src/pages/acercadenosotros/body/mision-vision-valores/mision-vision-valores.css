@@ -1,0 +1,31 @@
+
+.aboutus-mvv-div{
+    padding: 10vh 8vw;
+    background: linear-gradient(to bottom, rgba(250, 241, 234, 0%), rgba(250,241,234,100%));
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 80px;
+}
+
+.aboutus-section-div{
+    width: 24vw;
+}
+
+.aboutus-h2{
+    text-align: center;
+}
+
+ol {
+    list-style: decimal;
+}
+
+@media only all and (max-width: 830px){
+    .aboutus-mvv-div{
+        flex-direction: column;
+        align-items: center;
+    }
+    .aboutus-section-div{
+        width: 50vw;
+    }
+}

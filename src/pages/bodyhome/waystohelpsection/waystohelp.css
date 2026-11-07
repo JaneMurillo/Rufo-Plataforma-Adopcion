@@ -1,0 +1,51 @@
+.waystohelp-container {
+  /* Container*/
+  padding: 10% 5%; /* Top right bottom left */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ways-div {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.img-elipse {
+  display: flex;
+  justify-content: center;
+}
+
+.volunteerimg,
+.donateimg-home {
+  /* For the image*/
+  width: 199px;
+  height: 199px;
+}
+
+.elipse {
+  background: #e0f2f6;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  z-index: -1;
+  position: absolute;
+}
+
+.p-waystohelp {
+  /* Text*/
+  padding: 0% 20% 0% 20%;
+}
+
+/* @media only all is for the screen of all the types of dispositives */
+@media only all and (max-width: 830px) {
+  /* When reduces the screen, change this: */
+
+  .ways-div {
+    flex-direction: column;
+    gap: 8vh;
+  }
+}

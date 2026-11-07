@@ -1,0 +1,38 @@
+.eventscontent-container {
+  text-align: center;
+  padding: 10vh 5vw;
+}
+.cards-container-div-events {
+  display: flex;
+  gap: 4vw;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.eventsimg {
+  width: 60vw;
+}
+
+.elipse-eventos-div {
+  width: 50vw;
+  height: 50vw;
+  background-color: #e0f2f6;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 25%;
+  border-radius: 50%;
+}
+
+.bottomimg-div-eventos {
+  position: relative;
+  padding-top: 5vw;
+  margin-top: 10vh;
+}
+
+@media only all and (max-width: 830px) {
+  .eventscontent-container {
+    padding-top: 0;
+  }
+}

@@ -1,0 +1,42 @@
+.aboutus-container {  /* Container*/
+    padding: 10% 5%; /* Top right bottom left */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.img-aboutus-div {
+    padding-left: 10px;
+}
+
+.aboutusimg{  /* For the image*/
+    width: 40%;
+    height: 50%;
+    border-radius: 20px; /* Round edge */
+    box-shadow: 0 5px 5px 0 #0000006c; /* Shadow*/
+}
+
+.p-aboutus {  /* Text*/
+    margin-bottom: 30px;
+}
+
+.right-column-div {
+    width: 45%;
+}
+
+/* @media only all is for the screen of all the types of dispositives */
+@media only all and (max-width: 830px) { /* When reduces the screen, change this: */
+    .aboutus-container {
+        /*display: block; /* Align the items diferent*/
+        flex-direction: column;
+    }
+
+    .aboutusimg{
+        width: 70%;
+    }
+
+    .right-column-div{
+        width: 70%;
+    }
+
+}

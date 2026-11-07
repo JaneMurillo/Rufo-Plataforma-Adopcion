@@ -1,0 +1,40 @@
+.reportapplications-container {
+  gap: 2vw;
+  padding: 0 4vw;
+  margin-bottom: 40px;
+}
+
+.reportapplications-h2 {
+  text-align: center;
+  padding: 0 80px;
+}
+
+.reportapplications-arrow-back {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 2vh;
+}
+
+.rptapplication-back {
+  margin-left: 15px;
+}
+
+.reportapplications-table {
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.reportapplications-num-pages {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2%;
+}
+
+.reportapplications-export-btn {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}

@@ -1,0 +1,165 @@
+.form-adopt-div-container-req.open {
+  background-color: white;
+  border-radius: 20px;
+  position: absolute;
+  z-index: 9;
+  transform: scale(1);
+  top: 4vh;
+  left: 4vw;
+  width: 85vw;
+  padding: 20px 10px 40px 10px;
+  color: black;
+}
+
+.overlay-form-adopt-req.open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: scale(1);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 8;
+}
+
+.overlay-form-adopt-req.closed,
+.form-adopt-div-container-req.closed {
+  position: absolute;
+  transform: scale(0);
+}
+
+.cerrar-form-adopt-req {
+  font-family: 'Roboto';
+  font-size: 80px;
+  font-weight: lighter;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+  transform: scale(1);
+  color: black;
+  margin: 0;
+}
+
+.form-adopt-h2-req,
+.form-adopt-h3-req {
+  text-align: center;
+  margin: 30px;
+}
+
+.form-adopt-h3-req.invisible,
+.form-adopt-fieldset-req.invisible {
+  transform: scale(0);
+  position: absolute;
+}
+
+.form-adopt-h3-req.visible,
+.form-adopt-fieldset-req.visible {
+  transform: scale(1);
+  position: static;
+}
+
+.form-adopt-text-input-req {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  flex-grow: 1;
+  background-color: white;
+}
+
+.form-adopt-form-req {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-adopt-fieldset-req {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-adopt-label-req {
+  display: flex;
+  align-items: center;
+}
+
+.form-adopt-label-div-req {
+  display: grid;
+  grid-template-columns: 9vw 50vw;
+  column-gap: 10px;
+}
+
+.form-adopt-label-cuestionario-req {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-adopt-label-cuestionario-req > textarea {
+  font-size: 14px;
+  font-family: 'Roboto';
+  resize: vertical;
+}
+
+.form-adopt-fieldset-req.cuestionario {
+  display: grid;
+  grid-template-columns: 65vw;
+  gap: 20px;
+}
+
+/*.form-adopt-label-cuestionario > select {
+  height: 50px;
+}*/
+
+.form-button-div-req {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-button-continuar-req {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 0;
+  margin-top: 20px;
+}
+
+@media only all and (max-width: 830px) {
+  .form-adopt-label-div-req {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .form-adopt-label-div-req > input {
+    width: 60vw;
+  }
+
+  .cerrar-form-adopt-req {
+    font-size: 50px;
+    top: 10px;
+    right: 20px;
+  }
+
+  /*.form-adopt-fieldset.cuestionario {
+  display: grid;
+  grid-template-columns: 80vw;
+  grid-auto-rows: 100px;
+  grid-gap: 20px;
+  gap: 20px;
+}
+
+  .form-adopt-label {
+    display: grid;
+    grid-template-columns: 50vw;
+    grid-template-rows: ;
+    column-gap: 10px;
+  }*/
+}

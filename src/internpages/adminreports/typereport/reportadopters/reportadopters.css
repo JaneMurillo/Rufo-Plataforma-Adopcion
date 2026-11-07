@@ -1,0 +1,40 @@
+.reportadopters-container {
+  gap: 2vw;
+  padding: 0 4vw;
+  margin-bottom: 40px;
+}
+
+.reportadopters-h2 {
+  text-align: center;
+  padding: 0 80px;
+}
+
+.reportadopters-arrow-back {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 2vh;
+}
+
+.rptadopter {
+  margin-left: 15px;
+}
+
+.reportadopters-table {
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.reportadopters-num-pages {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2%;
+}
+
+.reportadopters-export-btn {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}

@@ -1,0 +1,35 @@
+.contrasena-div-cont {
+  background-color: #faf1ea;
+  width: 100vw;
+  height: 100vh;
+}
+
+.contrasena-card-div {
+  box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.16);
+  background-color: white;
+  padding: 0 5vw 5vw 5vw;
+  border-radius: 20px;
+  position: absolute;
+  left: 25%;
+  top: 20%;
+}
+
+.contrasena-h1 {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.contrasena-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contrasena-form > input {
+  border: 1px solid black;
+  padding: 3px;
+  border-radius: 5px;
+  width: 30vw;
+}

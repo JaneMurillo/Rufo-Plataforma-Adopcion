@@ -1,0 +1,52 @@
+footer {
+  font-family: 'Roboto';
+  font-size: 14px;
+}
+
+.footer-blue-div {
+  color: white;
+  background-color: #083151;
+  padding: 4% 8%; /* Top, right, bottom, left*/
+  box-sizing: border-box;
+}
+
+.facebooklogo {
+  width: 20px;
+  height: 20px;
+}
+
+.fb-logo-div {
+  display: inline;
+  justify-content: center;
+}
+
+.footer-line-div {
+  padding: 5px 5px; /* Top and bottom*/
+}
+
+.footer-warning-div {
+  display: flex;
+  justify-content: center;
+}
+
+.foot-nav-li {
+  list-style: none;
+}
+
+.foot-nav-li > a {
+  color: white;
+}
+
+.foot-nav-ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 0;
+}
+
+.foot-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

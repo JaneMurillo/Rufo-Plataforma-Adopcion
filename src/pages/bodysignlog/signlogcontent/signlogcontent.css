@@ -1,0 +1,143 @@
+.img-signup-div img {
+  object-fit: cover;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  box-shadow: inset 90px 0 20px 0 #e2bd9f;
+}
+
+.signup-page-container {
+  text-align: center;
+  padding: 10vh 5vw;
+  background-image: linear-gradient(
+      to right,
+      rgba(226, 189, 159, 80%),
+      rgba(226, 189, 159, 0%) 70%
+    ),
+    url('./side-view-dog-looking-away-copy-space.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 18vh 8vw;
+}
+
+.signup-cards-container {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2vw;
+  justify-content: center;
+}
+
+.signup-card-div {
+  box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.16);
+  background-color: white;
+  border-radius: 20px;
+  width: 30vw;
+  padding: 4vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-log-div {
+  display: flex;
+}
+
+.logo-signup {
+  margin-right: 20px;
+}
+
+.signup-h2 {
+  margin: 20px 0;
+}
+
+.signup-sign-h3 {
+  font-family: 'Amatic SC';
+  font-size: 35px;
+  margin: 20px 0 50px 0;
+}
+
+.signup-h3 {
+  font-family: 'Amatic SC';
+  font-size: 35px;
+}
+
+.signup-input {
+  background-color: white;
+  border: 1px solid black;
+  width: 30vw;
+  font-family: 'Roboto';
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.signup-a {
+  text-decoration: underline;
+  margin: 13px 0 8px 0;
+  font-size: 14px;
+  color: #083151;
+}
+
+.singup-datos-p {
+  font-size: 17px;
+  margin: 12px 0 11px 0;
+}
+
+.singup-input-p {
+  margin: 20px 0 10px 0;
+  align-self: stretch;
+  font-size: 15px;
+}
+
+.signup-card-div > button {
+  padding: 7px 35px;
+  margin: 10px;
+  width: 280px;
+}
+
+.signup-fb-google-button > button {
+  padding: 7px 35px;
+  margin-top: 15px;
+  width: 280px;
+}
+
+.signup-checkboxes > label {
+  margin-top: 18px;
+  font-family: Roboto;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.signup-checkboxes > p > a,
+.signup-checkboxes > label > a {
+  text-decoration: underline;
+  color: #083151;
+}
+
+.singup-field-form-p {
+  margin: 10px;
+}
+
+@media only all and (max-width: 830px) {
+  .signup-cards-container {
+    margin-bottom: 40px;
+    display: grid;
+    gap: 2vw;
+    justify-content: center;
+  }
+
+  .signup-card-div {
+    width: 60vw;
+  }
+
+  .signup-input {
+    width: 55vw;
+  }
+}

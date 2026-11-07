@@ -1,0 +1,20 @@
+.staff-pets-container {
+  gap: 2vw;
+  padding: 0 4vw;
+  margin-bottom: 40px;
+}
+
+.staff-pet-add-button {
+  margin-top: 4vw;
+  margin-bottom: 2vw;
+  text-align: -webkit-right;
+}
+
+.staff-pet-table {
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.col-center {
+  text-align: center;
+}

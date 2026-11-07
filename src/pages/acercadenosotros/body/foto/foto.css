@@ -1,0 +1,11 @@
+
+.aboutus-foto-div{
+    padding: 12vh 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutus-foto{
+    width: 70vw;
+}

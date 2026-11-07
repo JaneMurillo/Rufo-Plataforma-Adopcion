@@ -1,0 +1,10 @@
+.staff-applications-container {
+  gap: 2vw;
+  padding: 0 4vw;
+  margin-bottom: 40px;
+}
+
+.staff-applications-table {
+  align-items: center;
+  padding-bottom: 20px;
+}

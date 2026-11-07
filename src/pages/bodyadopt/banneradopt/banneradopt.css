@@ -1,0 +1,15 @@
+.adopt-container{
+    /*background-image: url('./group-portrait-of-adorable-puppies.jpg');*/
+    background: linear-gradient(to bottom, rgba(239,246,251,100%), rgba(255,255,255,0%) 50%), url('./group-portrait-of-adorable-puppies.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 15vh 20vw;
+    min-height: 300px;
+    background-position: center center;
+    
+}
+
+.h1-banner-adopt {
+    margin-top: 0;
+}
+

@@ -1,0 +1,68 @@
+body {
+  font-family: 'Roboto';
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Amatic SC';
+  font-size: 80px;
+  margin: 60px 0;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: 'Amatic SC';
+  font-size: 50px;
+  margin: 30px 0;
+  font-weight: bold;
+}
+
+h3 {
+  font-family: 'Roboto';
+  font-size: 25px;
+  font-weight: bold;
+  margin: 30px 0;
+}
+
+h4 {
+  font-family: 'Amatic SC';
+  font-size: 25px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+p,
+li {
+  font-family: 'Roboto';
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+button {
+  font-family: 'Roboto';
+  font-size: 14px;
+}
+
+
+table{
+  background-color: white;
+  width: 100%;
+  text-align: left;
+  font-family: 'Roboto';
+  border-collapse: collapse;
+  font-size: 20px;
+}
+
+th, td {
+  border: solid 1px black;
+  padding: 10px 20px;
+}
+
+thead{
+  font-weight: bold;
+}
+
+tr:hover td{
+  background-color: #083151;
+  color: white;
+}

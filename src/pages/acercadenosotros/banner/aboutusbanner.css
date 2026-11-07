@@ -1,0 +1,24 @@
+
+.aboutus-banner-div{
+    background: linear-gradient(to right, rgba(204,135,0,100%), rgba(255,178,26,0%) 70%), url('./dog-with-glasses.png');
+    min-height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 15vh 20vw;
+}
+
+.popup-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 200ms;
+}
+
+.popup-container:target{
+    background: rgba(0,0,0,0.6);
+    visibility: visible;
+    opacity: 1;
+}
+

@@ -1,0 +1,40 @@
+.reportpets-container {
+  gap: 2vw;
+  padding: 0 4vw;
+  margin-bottom: 40px;
+}
+
+.reportpets-h2 {
+  text-align: center;
+  padding: 0 80px;
+}
+
+.reportpets-arrow-back {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 2vh;
+}
+
+.rptpet-back {
+  margin-left: 15px;
+}
+
+.reportpets-table {
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.reportpets-num-pages {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2%;
+}
+
+.reportpets-export-btn {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}

@@ -1,0 +1,567 @@
+.pet-edit-button {
+  padding: 0 10px;
+}
+
+/* UPDATE POPUP */
+
+.edit-popup.closed,
+.overlay-btn-edit {
+  position: absolute;
+  transform: scale(0);
+}
+
+.overlay-btn-edit.open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: scale(1);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 6;
+}
+
+.edit-popup.open {
+  position: absolute;
+  top: 0;
+  transform: scale(1);
+  width: 100%;
+  height: 100%;
+  padding-left: 15vw;
+  padding-top: 5vw;
+  z-index: 7;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.edit-popup-title.invisible, .up-med-hist-popup-title.invisible,
+.form-edit-fieldset.invisible, .up-med-hist-popup-fieldset.invisible {
+  transform: scale(0);
+  position: absolute;
+}
+
+.edit-popup-title.visible, .up-med-hist-popup-title.visible,
+.form-edit-fieldset.visible, .up-med-hist-popup-fieldset.visible {
+  transform: scale(1);
+  position: static;
+}
+
+.edit-popup-title {
+  text-align: center;
+}
+
+.edit-popup-container {
+  background-color: white;
+  border-radius: 20px;
+  width: 550px;
+  padding: 50px;
+  padding-bottom: 70px;
+  text-align: center;
+}
+
+.edit-form {
+  padding: 1vh;
+}
+
+.edit-imgs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1vh;
+  padding-bottom: 25px;
+}
+
+.edit-imgs {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 30px;
+  width: 150px;
+  height: 150px;
+}
+
+.edit-imgs-btn {
+  border: none;
+  background-color: #f97276;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  margin-top: 100px;
+  margin-left: 80px;
+}
+
+.edit-icon-h {
+  width: 20px;
+  height: 4px;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 9px;
+  margin-left: 5px;
+  position: fixed;
+}
+
+.edit-icon-v {
+  width: 4px;
+  height: 20px;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 2px;
+  margin-left: 13px;
+}
+
+.edit-info-input {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0px;
+  width: 200px;
+}
+
+.edit-info-input-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+.edit-text {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 8px;
+  width: 30vh;
+  height: 27px;
+  font-family: 'Roboto';
+  font-size: 14px;
+  margin-left: 140px;
+  position: absolute;
+}
+
+.edit-input {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 8px;
+  padding: 7px;
+  width: 40vw;
+  font-family: 'Roboto';
+  font-size: 16px;
+}
+
+.opts-edit {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  padding-left: 140px;
+  position: absolute;
+}
+
+.opc-edit {
+  display: flex;
+  flex-direction: row;
+  padding-left: 15px;
+}
+
+.opts-edit-radio {
+  display: flex;
+  margin-left: 90px;
+}
+
+.edit-info-lbl {
+  font-size: 16px;
+}
+
+.lbl-edit {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: lighter;
+  padding: 2px;
+  margin-left: 10px;
+}
+
+.radio-edit {
+  border: 1px solid black;
+}
+
+.select-especie,
+.select-health-status {
+  border: 1px solid black;
+  padding: 7px;
+  border-radius: 5px;
+  width: 30vh;
+  height: 30px;
+}
+
+.edit-personality-inputs {
+  padding: 10px 0px;
+  display: flex;
+}
+
+.personality-right {
+  padding-top: 13px;
+}
+
+.edit-pers {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 8px;
+  padding: 7px;
+  width: 29vh;
+  height: 13px;
+  font-family: 'Roboto';
+  font-size: 14px;
+  margin-bottom: 8px;
+  margin-left:7px;
+}
+
+.close-edit-popup {
+  font-size: 50px;
+  color: #083151;
+  margin: 0;
+  font-weight: 100;
+  cursor: pointer;
+  position: absolute;
+  padding-left: 45vh;
+}
+
+input[type='radio']:checked:after {
+  width: 12px;
+  height: 12px;
+  border-radius: 15px;
+  top: 0px;
+  left: 0px;
+  position: relative;
+  background-color: #083151;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+}
+
+input[type='circle']:checked:after {
+  width: 12px;
+  height: 12px;
+  border-radius: 15px;
+  top: 0px;
+  left: 0px;
+  position: relative;
+  background-color: #083151;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+}
+
+input[type='circle'] {
+  width: 12px;
+  height: 12px;
+  border-radius: 15px;
+  position: relative;
+  content: '';
+  display: inline-block;
+}
+
+/* UPDATE POPUP MEDICAL HISTORY*/
+
+.up-med-hist-popup.closed,
+.up-overlay-med-hist {
+  position: absolute;
+  transform: scale(0);
+}
+
+.up-overlay-med-hist.open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: scale(1);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 6;
+}
+
+.up-med-hist-popup.open {
+  position: absolute;
+  top: 0;
+  transform: scale(1);
+  width: 100%;
+  height: 100%;
+  margin-top: 3vh;
+  padding: 15vw;
+  z-index: 7;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.up-med-hist-popup-title {
+  text-align: center;
+}
+
+.up-mhist-p {
+ font-size: 18px;
+}
+
+.up-med-hist-popup-container {
+  background-color: white;
+  border-radius: 20px;
+  width: 550px;
+  padding: 50px;
+  text-align: center;
+  padding-bottom: 70px;
+}
+
+.up-med-hist-form {
+  padding: 1vh;
+}
+
+.up-med-hist-info-input {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0px;
+}
+
+.up-opts-med-hist {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.up-opc-med-hist {
+  padding-left: 5px;
+}
+
+.up-opts-med-hist-radio {
+  display: flex;
+}
+
+.up-mhist-info-lbl {
+  font-size: 18px;
+}
+
+.up-lbl-med-hist {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: lighter;
+  padding: 2px;
+}
+
+.up-radio-med-hist {
+  border: 1px solid black;
+}
+
+.up-mhist-input {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 8px;
+  width: 90%;
+  height: 50px;
+  padding: 10px 20px;
+  font-family: 'Roboto';
+  font-size: 14px;
+}
+
+.up-mhist-imgs-container {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 8px;
+  width: 90%;
+  height: 35px;
+  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.up-mhist-img {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 8px;
+  width: 45px;
+  height: 45px;
+}
+
+.up-mhist-img-p {
+  padding-left: 20px;
+  padding-top: 1px;
+  align-items: center;
+}
+
+.up-mhist-img-times {
+  font-size: 30px;
+  margin: 0;
+  font-weight: 100;
+  cursor: pointer;
+  position: absolute;
+  padding-left: 38vh;
+}
+
+.up-mhist-btn-img {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.up-close-med-hist-popup {
+  font-size: 50px;
+  color: #083151;
+  margin: 0;
+  font-weight: 100;
+  cursor: pointer;
+  position: absolute;
+  padding-left: 45vh;
+}
+
+.up-mhist-btns {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width:1200px) {
+  .edit-popup.open {
+    position: absolute;
+    top: 0;
+    transform: scale(1);
+    width: 100%;
+    height: 100%;
+    padding: 10vw;
+    z-index: 7;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .edit-popup-container {
+    background-color: white;
+    border-radius: 20px;
+    width: 380px;
+    padding: 20px;
+    padding-bottom: 70px;
+    text-align: center;
+  }
+
+  .edit-text {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 8px;
+    width: 9vh;
+    height: 27px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    margin-left: 140px;
+    position: absolute;
+  }
+
+  .select-especie,
+  .select-health-status {
+    border: 1px solid black;
+    padding: 7px;
+    border-radius: 5px;
+    width: 9vh;
+    height: 30px;
+  }
+
+  .opc-edit {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+  }
+
+  .lbl-edit {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: lighter;
+    padding: 2px;
+    margin-left: 3px;
+  }
+
+  .edit-pers {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 8px;
+    padding: 7px;
+    width: 8vh;
+    height: 13px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    margin-bottom: 8px;
+    margin-left: 43px;
+  }
+
+
+}
+
+@media screen and (max-width:830px) {
+  .edit-popup.open {
+    position: absolute;
+    top: 0;
+    transform: scale(1);
+    width: 100%;
+    height: 100%;
+    margin-top: 3vh;
+    padding: 1vw;
+    z-index: 7;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .edit-popup-container {
+    background-color: white;
+    border-radius: 20px;
+    width: 380px;
+    padding: 20px;
+    padding-bottom: 70px;
+    text-align: center;
+  }
+
+  .edit-text {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 8px;
+    width: 9vh;
+    height: 27px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    margin-left: 140px;
+    position: absolute;
+  }
+
+  .select-especie,
+  .select-health-status {
+    border: 1px solid black;
+    padding: 7px;
+    border-radius: 5px;
+    width: 9vh;
+    height: 30px;
+  }
+
+  .opts-edit-radio {
+    display: flex;
+    margin-left: 80px;
+  }
+
+  .opc-edit {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+  }
+
+  .lbl-edit {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: lighter;
+    padding: 2px;
+    margin-left: 3px;
+  }
+
+  .edit-pers {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 8px;
+    padding: 7px;
+    width: 8vh;
+    height: 13px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    margin-bottom: 8px;
+    margin-left: 43px;
+  }
+}

@@ -1,0 +1,21 @@
+.pets-container {
+  gap: 2vw;
+  padding: 0 5vw;
+  margin-bottom: 40px;
+}
+
+.btns-pet-opts {
+  display: inline-flex;
+  margin-top: 4vw;
+  margin-bottom: 2vw;
+  right: 0;
+}
+
+.pet-table {
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.col-center {
+  text-align: center;
+}

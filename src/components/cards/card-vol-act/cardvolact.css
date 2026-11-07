@@ -1,0 +1,36 @@
+.cardvolact-container {
+  box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.16);
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: justify;
+}
+.cardvol-align {
+  display: inline-flex;
+}
+.cardvol-left {
+  margin: 20px;
+}
+
+.tit-cardvol-h3 {
+  color: #083151;
+  margin: 15px 0;
+  text-align: left;
+}
+
+.hash-card-p {
+  font-weight: bold;
+}
+
+.img-cardvol {
+  width: 210px;
+  height: 210px;
+  border-radius: 20px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.arrow-cardvolact {
+  margin-left: auto;
+  max-width: 35px;
+  margin-top: 10px;
+}

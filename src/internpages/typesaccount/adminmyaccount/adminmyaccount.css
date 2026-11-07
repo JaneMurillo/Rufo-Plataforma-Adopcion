@@ -1,0 +1,192 @@
+.adminaccount-container {
+  padding: 0 4vw;
+  margin-bottom: 8vw;
+  text-align: center;
+}
+
+.adminaccount-form {
+  align-items: center;
+  padding-top: 20px;
+}
+
+.adminaccount-col {
+  display: flex;
+  padding: 60px 0 80px 0;
+}
+
+.adminaccount-img {
+  border: 1px solid black;
+  background-image: url('../avatar-placeholder.svg');
+  border-radius: 30px;
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 10px;
+  margin-left: 30vh;
+}
+
+.adminaccount-imgs-btn {
+  border: none;
+  background-color: #f97276;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  margin-top: 100px;
+  margin-left: 80px;
+}
+
+.adminaccount-icon {
+    align-items: center;
+}
+
+.adminaccount-icon-h {
+  width: 20px;
+  height: 4px;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 9px;
+  margin-left: 4px;
+  position: fixed;
+  position: absolute;
+}
+
+.adminaccount-icon-v {
+  width: 3px;
+  height: 20px;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 2px;
+  margin-left: 13px;
+}
+
+.adminaccount-info-container {
+    padding-left: 20px;
+}
+
+.adminaccount-type-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 3vh;
+  padding-bottom: 20px;
+}
+
+.adminaccount-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 3vh;
+}
+
+.adminaccount-input {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 40px;
+  padding: 9px;
+  width: 25vw;
+  height: 9px;
+  font-family: 'Roboto';
+  font-size: 14px;
+  margin-left: 150px;
+  position: absolute;
+}
+
+.adminaccount-type-input {
+  border: 1px solid rgb(122, 122, 122);
+  background-color: white;
+  border-radius: 40px;
+  padding: 9px;
+  width: 25vw;
+  height: 9px;
+  font-family: 'Roboto';
+  font-size: 14px;
+  margin-left: 150px;
+  position: absolute;
+}
+
+@media screen and (max-width:1220px) {
+  .adminaccount-col {
+    display: flex;
+    padding: 60px 0 80px 0;
+  }
+
+  .adminaccount-info {
+    padding-left: 5vh;
+  }
+
+  .adminaccount-type-info {
+    padding-left: 5vh;
+  }
+
+  .adminaccount-img {
+    margin-left: 10vh;
+  }
+
+  .adminaccount-input {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 40px;
+    padding: 9px;
+    width: 25vw;
+    height: 9px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    margin-left: 120px;
+    position: absolute;
+  }
+
+  .adminaccount-type-input {
+    border: 1px solid rgb(122, 122, 122);
+    background-color: white;
+    border-radius: 40px;
+    padding: 9px;
+    width: 25vw;
+    height: 9px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    margin-left: 120px;
+    position: absolute;
+  }
+}
+
+@media screen and (max-width:830px) {
+
+  .adminaccount-info {
+    padding-left: 2vh;
+  }
+
+  .adminaccount-type-info {
+    padding-left: 2vh;
+  }
+
+  .adminaccount-img {
+    margin-left: 5vh;
+  }
+
+  .adminaccount-input {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 40px;
+    padding: 9px;
+    width: 25vw;
+    height: 9px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    margin-left: 120px;
+    position: absolute;
+  }
+
+  .adminaccount-type-input {
+    border: 1px solid rgb(122, 122, 122);
+    background-color: white;
+    border-radius: 40px;
+    padding: 9px;
+    width: 25vw;
+    height: 9px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    margin-left: 120px;
+    position: absolute;
+  }
+}

@@ -1,0 +1,674 @@
+.pet-add-button {
+  padding: 0 10px;
+}
+
+/* ADD POPUP */
+
+.overlay-btn-add.open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: scale(1);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 8;
+}
+
+.add-popup.open {
+  position: absolute;
+  top: 0;
+  transform: scale(1);
+  width: 100%;
+  height: 100%;
+  padding-left: 15vw;
+  padding-top: 5vw;
+  z-index: 9;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+
+.add-popup.closed,
+.overlay-btn-add.closed {
+  position: absolute;
+  transform: scale(0);
+}
+
+.add-popup-title.invisible, .med-hist-popup-title.invisible,
+.form-add-fieldset.invisible, .med-hist-popup-fieldset.invisible {
+  transform: scale(0);
+  position: absolute;
+}
+
+.add-popup-title.visible, .med-hist-popup-title.visible,
+.form-add-fieldset.visible, .med-hist-popup-fieldset.visible {
+  transform: scale(1);
+  position: static;
+}
+
+.add-popup-container {
+  background-color: white;
+  border-radius: 20px;
+  width: 550px;
+  padding: 50px;
+  text-align: center;
+}
+
+.add-form {
+  padding: 1vh;
+}
+
+.add-imgs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1vh;
+  padding-bottom: 25px;
+}
+
+.add-imgs {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 30px;
+  width: 150px;
+  height: 150px;
+}
+
+.add-imgs-btn {
+  border: none;
+  background-color: #f97276;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  margin-top: 100px;
+  margin-left: 80px;
+}
+
+.add-icon-h {
+  width: 20px;
+  height: 4px;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 9px;
+  margin-left: 5px;
+  position: fixed;
+}
+
+.add-icon-v {
+  width: 4px;
+  height: 20px;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 2px;
+  margin-left: 13px;
+}
+
+.add-info-input {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0px;
+  width: 200px;
+}
+
+.add-info-input-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+.add-text {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 8px;
+  width: 30vh;
+  height: 27px;
+  font-family: 'Roboto';
+  font-size: 14px;
+  margin-left: 140px;
+  position: absolute;
+}
+
+.add-input {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 8px;
+  padding: 7px;
+  width: 40vw;
+  font-family: 'Roboto';
+  font-size: 16px;
+}
+
+.opts-add {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  padding-left: 140px;
+  position: absolute;
+}
+
+.opc-add {
+  display: flex;
+  flex-direction: row;
+  padding-left: 15px;
+}
+
+.opts-add-radio {
+  display: flex;
+  margin-left: 90px;
+}
+
+.add-info-lbl {
+  font-size: 16px;
+}
+
+.lbl-add {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: lighter;
+  padding: 2px;
+  margin-left: 10px;
+}
+
+.radio-add {
+  border: 1px solid black;
+}
+
+.select-especie,
+.select-health-status {
+  border: 1px solid black;
+  padding: 7px;
+  border-radius: 5px;
+  width: 30vh;
+  height: 30px;
+}
+
+.add-personality-inputs {
+  padding: 10px 0px;
+  display: flex;
+}
+
+.personality-right {
+  padding-top: 13px;
+}
+
+.add-input-per {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 8px;
+  padding: 7px;
+  width: 29vh;
+  height: 13px;
+  font-family: 'Roboto';
+  font-size: 14px;
+  margin-bottom: 8px;
+  margin-left: 10px;
+}
+
+.mhist-btns {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-btn-continue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 0;
+  margin-top: 20px;
+}
+
+.close-add-popup {
+  font-size: 50px;
+  color: #083151;
+  margin: 0;
+  font-weight: 100;
+  cursor: pointer;
+  position: absolute;
+  padding-left: 45vh;
+  transform: scale(1);
+}
+
+input[type='radio']:checked:after {
+  width: 12px;
+  height: 12px;
+  border-radius: 15px;
+  top: 0px;
+  left: 0px;
+  position: relative;
+  background-color: #083151;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+}
+
+input[type='circle']:checked:after {
+  width: 12px;
+  height: 12px;
+  border-radius: 15px;
+  top: 0px;
+  left: 0px;
+  position: relative;
+  background-color: #083151;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+}
+
+input[type='circle'] {
+  width: 12px;
+  height: 12px;
+  border-radius: 15px;
+  position: relative;
+  content: '';
+  display: inline-block;
+}
+
+.pet-delete-button {
+  padding: 0 10px;
+}
+
+/* ADD POPUP MEDICAL HISTORY*/
+
+.med-hist-popup.closed,
+.overlay-med-hist {
+  position: absolute;
+  transform: scale(0);
+}
+
+.overlay-med-hist.open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: scale(1);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 6;
+}
+
+.med-hist-popup.open {
+  position: absolute;
+  top: 0;
+  transform: scale(1);
+  width: 100%;
+  height: 100%;
+  margin-top: 3vh;
+  padding: 15vw;
+  z-index: 7;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.med-hist-popup-title {
+  text-align: center;
+}
+
+.mhist-p {
+ font-size: 18px;
+}
+
+.med-hist-popup-container {
+  background-color: white;
+  border-radius: 20px;
+  width: 550px;
+  padding: 50px;
+  text-align: center;
+  padding-bottom: 70px;
+}
+
+.med-hist-form {
+  padding: 1vh;
+}
+
+.med-hist-info-input {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0px;
+}
+
+.opts-med-hist {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.opc-med-hist {
+  padding-left: 5px;
+}
+
+.opts-med-hist-radio {
+  display: flex;
+}
+
+.mhist-info-lbl {
+  font-size: 18px;
+}
+
+.lbl-med-hist {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: lighter;
+  padding: 2px;
+}
+
+.radio-med-hist {
+  border: 1px solid black;
+}
+
+.mhist-input {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 8px;
+  width: 90%;
+  height: 50px;
+  padding: 10px 20px;
+  font-family: 'Roboto';
+  font-size: 14px;
+}
+
+.mhist-imgs-container {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 8px;
+  width: 90%;
+  height: 35px;
+  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.mhist-img {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 8px;
+  width: 45px;
+  height: 45px;
+}
+
+.mhist-img-p {
+  padding-left: 20px;
+  padding-top: 1px;
+  align-items: center;
+}
+
+.mhist-img-times {
+  font-size: 30px;
+  margin: 0;
+  font-weight: 100;
+  cursor: pointer;
+  position: absolute;
+  padding-left: 38vh;
+}
+
+.mhist-btn-img {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.close-med-hist-popup {
+  font-size: 50px;
+  color: #083151;
+  margin: 0;
+  font-weight: 100;
+  cursor: pointer;
+  position: absolute;
+  padding-left: 45vh;
+}
+
+
+
+@media screen and (max-width:1200px) {
+  .add-popup.open {
+    position: absolute;
+    top: 0;
+    transform: scale(1);
+    width: 100%;
+    height: 100%;
+    margin-top: 2vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .add-popup-container {
+    background-color: white;
+    border-radius: 20px;
+    width: 450px;
+    padding: 50px;
+    text-align: center;
+  }
+
+  .add-text {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 8px;
+    width: 25vh;
+    height: 27px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    margin-left: 140px;
+    position: absolute;
+  }
+
+  .select-especie,
+  .select-health-status {
+    border: 1px solid black;
+    padding: 7px;
+    border-radius: 5px;
+    width: 25vh;
+    height: 30px;
+  }
+
+  .opc-add {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+  }
+
+  .lbl-add {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: lighter;
+    padding: 2px;
+    margin-left: 3px;
+  }
+
+  .add-input-per {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 8px;
+    padding: 7px;
+    width: 24vh;
+    height: 13px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    margin-bottom: 8px;
+    margin-left: 43px;
+  }
+
+  .close-add-popup {
+    font-size: 50px;
+    color: #083151;
+    margin: 0;
+    font-weight: 100;
+    cursor: pointer;
+    position: absolute;
+    padding-left: 35vh;
+    transform: scale(1);
+  }
+
+
+}
+
+@media screen and (max-width:830px) {
+  .add-popup.open {
+    position: absolute;
+    top: 0;
+    transform: scale(1);
+    width: 100%;
+    height: 100%;
+    margin-top: 3vh;
+    padding: 6vw;
+    padding-bottom: 0px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .add-popup-container {
+    background-color: white;
+    border-radius: 20px;
+    width: 380px;
+    padding: 40px;
+    text-align: center;
+  }
+
+  .add-text {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 8px;
+    width: 20vh;
+    height: 27px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    margin-left: 140px;
+    position: absolute;
+  }
+
+  .select-especie,
+  .select-health-status {
+    border: 1px solid black;
+    padding: 7px;
+    border-radius: 5px;
+    width: 20vh;
+    height: 30px;
+  }
+
+  .opts-add-radio {
+    display: flex;
+    margin-left: 80px;
+  }
+
+  .opc-add {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+  }
+
+  .lbl-add {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: lighter;
+    padding: 2px;
+    margin-left: 3px;
+  }
+
+  .add-input-per {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 8px;
+    padding: 7px;
+    width: 19vh;
+    height: 13px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    margin-bottom: 8px;
+    margin-left: 43px;
+  }
+
+  .close-add-popup {
+    font-size: 50px;
+    color: #083151;
+    margin: 0;
+    font-weight: 100;
+    cursor: pointer;
+    position: absolute;
+    padding-left: 33vh;
+    transform: scale(1);
+  }
+}
+
+/*@media screen and (max-width:1500px) {
+  .add-popup.open {
+    position: absolute;
+    top: 0;
+    transform: scale(1);
+    width: 100%;
+    height: 100%;
+    margin-top: 3vh;
+    padding: 5vw;
+    z-index: 7;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .add-popup-container {
+    background-color: white;
+    border-radius: 20px;
+    width: 550px;
+    padding: 50px;
+    padding-bottom: 70px;
+    text-align: center;
+  }
+
+  .add-p {
+    font-size: 18px;
+  }
+
+  .add-text {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 8px;
+    width: 17vh;
+    height: 27px;
+    font-family: 'Roboto';
+    font-size: 16px;
+    margin-left: 140px;
+    position: absolute;
+  }
+
+  .select-especie,
+  .select-health-status {
+    border: 1px solid black;
+    padding: 7px;
+    border-radius: 5px;
+    width: 17vh;
+    height: 30px;
+  }
+
+  .opc-add {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+  }
+
+  .lbl-add {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: lighter;
+    padding: 2px;
+    margin-left: 3px;
+  }
+
+  .add-input-per {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 8px;
+    padding: 7px;
+    width: 16vh;
+    height: 13px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    margin-bottom: 8px;
+    margin-left: 25px;
+  }
+}*/

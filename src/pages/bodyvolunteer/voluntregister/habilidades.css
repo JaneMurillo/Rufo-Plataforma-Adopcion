@@ -1,0 +1,30 @@
+.search-wrapper {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#search_input.searchBox {
+  font-family: 'Roboto';
+  font-size: 14px;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.option {
+  margin: 0;
+}
+
+li.option:hover {
+  background: #083151;
+  color: white;
+}
+
+.highlightOption.highlight {
+  color: black;
+  background: white;
+}
+
+span.chip {
+  background: #083151;
+}

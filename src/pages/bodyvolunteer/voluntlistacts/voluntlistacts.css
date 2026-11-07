@@ -1,0 +1,13 @@
+.vol-list-act-container {
+  padding: 10vh 3vw 15vh 3vw; /* Top right bottom left */
+  text-align: -webkit-center;
+}
+
+.cards-container-div-vol-acts {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 4vw;
+  flex-wrap: wrap;
+  justify-content: center;
+}

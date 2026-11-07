@@ -1,0 +1,31 @@
+.normal-buttons {
+  padding: 12px 35px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button-pink {
+  color: white;
+  background-color: #f97276;
+  border: 2px solid #f97276;
+}
+
+.button-blue {
+  color: white;
+  background-color: #083151;
+  border: 2px solid #083151;
+  font-weight: lighter;
+}
+
+.button-transparent {
+  color: #f97276;
+  background: transparent;
+  border: 2px solid #f97276;
+}
+
+.button-transp-black {
+  color: black;
+  background: transparent;
+  border: 2px solid black;
+}

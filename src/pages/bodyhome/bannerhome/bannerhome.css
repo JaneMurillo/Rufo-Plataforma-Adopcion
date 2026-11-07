@@ -1,0 +1,21 @@
+.img-banner-div img {
+  object-fit: cover;
+  width: 100%;
+  position: absolute;
+  z-index: -1; /*z-index put the components on top of the image*/
+  box-shadow: inset 90px 0 20px 0 #e2bd9f; /*How to use box-shadow: https://www.youtube.com/watch?v=wtfATdEMUxY
+    Inset is shadow in the box, */
+}
+
+.home-container {
+  background-image: linear-gradient(
+      to right,
+      rgba(226, 189, 159, 80%),
+      rgba(226, 189, 159, 0%) 70%
+    ),
+    url('./side-view-dog-looking-away-copy-space.jpeg');
+  background-position: left center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 18vh 8vw;
+}

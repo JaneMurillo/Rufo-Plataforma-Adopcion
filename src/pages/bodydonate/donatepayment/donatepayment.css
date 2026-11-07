@@ -1,0 +1,21 @@
+.donate-second-form-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dnt-field-form > label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-family: Roboto;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.dnt-field-form > p > a {
+  text-decoration: underline;
+  color: #083151;
+}

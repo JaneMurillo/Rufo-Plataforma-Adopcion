@@ -1,0 +1,86 @@
+.vol-reg-container {
+  background: linear-gradient(to bottom, white, #e0f2f6);
+  text-align: -webkit-center;
+  padding: 5vh 3vw 15vh 3vw;
+  border-radius: 10%;
+}
+
+.vol-reg-card {
+  box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.16);
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: -webkit-left;
+  max-width: 370px;
+}
+
+.vol-reg-card > h3 {
+  font-weight: lighter;
+  margin-top: 10px;
+  max-width: 350px;
+}
+
+.input-vol {
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin-bottom: 1vw;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.input-vol:placeholder-shown {
+  font-family: 'Roboto';
+  font-size: 14px;
+}
+
+.opt-vol {
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  font-family: 'Roboto';
+  font-size: 14px;
+  padding: 10px;
+}
+
+.volneedimg {
+  /* For the image*/
+  width: 430px;
+  border-radius: 20px; /* Round edge */
+}
+.vol-with-img {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 4vw;
+}
+
+.vol-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.vol-field-nombre {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+
+.vol-field-dos {
+  display: flex;
+  flex-direction: column;
+}
+
+.vol-btn-submit {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.opt-vol-mult {
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  font-family: 'Roboto';
+  font-size: 14px;
+  padding: 10px;
+}
