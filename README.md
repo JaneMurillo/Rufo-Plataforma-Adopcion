@@ -9,7 +9,7 @@ Es un proyecto modular universitario del Centro Universitario de Ciencias Exacta
 ![Página de inicio](docs/screenshots/inicio.png)
 
 > [!NOTE]
-> **Qué código contiene este repositorio:** una versión anterior de la aplicación, con el frontend y los servicios Express. El sistema de recomendación, TypeORM, Docker y el despliegue en la nube pertenecen a la versión final (2024A), que está en un repositorio privado del equipo. Esas partes se describen aquí y en el documento, pero su código no está publicado en este repositorio.
+> **Qué código contiene este repositorio:** una versión anterior de la aplicación, con el frontend y los servicios Express, y el código del sistema de recomendación de la versión final en [`recomendador/`](recomendador/). TypeORM, Docker y el despliegue en la nube pertenecen a la versión final (2024A), que está en un repositorio privado del equipo; esas partes se describen aquí y en el documento, pero su código no está publicado en este repositorio.
 
 ## Mi participación
 
@@ -20,6 +20,8 @@ Estuve a cargo del módulo de sistemas inteligentes, que incorpora al proyecto u
 - El módulo comenzó con k-vecinos más cercanos (k-NN) y evolucionó a similitud de coseno para evaluar mejor la afinidad entre las preferencias del usuario y las características de cada perro.
 - Las recomendaciones consideran sexo, talla, edad y personalidad.
 - Los resultados se presentan como "Matches" con los 25 perros más compatibles.
+
+La separación del algoritmo como API la realizó el compañero responsable de la estructura del proyecto. El código está en [`recomendador/`](recomendador/).
 
 ### Otras aportaciones al frontend
 
@@ -84,7 +86,7 @@ Estuve a cargo del módulo de sistemas inteligentes, que incorpora al proyecto u
 | Base de datos | PostgreSQL | Ambas |
 | Autenticación | Passport (local, JWT, Google OAuth 2.0, Facebook) | Este repositorio |
 | Servicios | Nodemailer con Gmail OAuth2, excel4node | Este repositorio |
-| Inteligencia artificial | k-NN, similitud de coseno | Final |
+| Inteligencia artificial | Similitud de coseno, k-NN con scikit-learn y pandas, Flask | Final, con el código en `recomendador/` |
 | Migraciones | TypeORM | Final |
 | Infraestructura | Docker, Docker Compose, Google Cloud | Final |
 | Diseño y gestión | Figma, Scrum | Ambas |
@@ -117,6 +119,7 @@ flowchart LR
 ├── backend-tests/   # API principal: mascotas, usuarios, sesión, solicitudes y donativos
 ├── email-api/       # Envío de correos
 ├── excel_api/       # Generación de reportes en Excel
+├── recomendador/    # Sistema de recomendación de la versión final
 └── docs/            # Documento del proyecto, figuras y capturas
 ```
 
@@ -173,6 +176,4 @@ Estos pasos corresponden al código de este repositorio.
 
 ## Sobre este repositorio
 
-Esta es una versión pública del proyecto, con historial nuevo y sin credenciales, datos personales ni reportes generados. Los datos de cuenta que aparecen en la interfaz son de demostración.
-
-En el documento se omitieron los nombres de las demás personas del equipo y de los docentes, los correos, el enlace al repositorio privado y los identificadores de infraestructura.
+Esta es una versión pública del proyecto, con historial nuevo y sin credenciales ni reportes generados. Los datos de cuenta que aparecen en la interfaz son de demostración. El documento del proyecto se incluye en su versión original, con la autoría del equipo.
