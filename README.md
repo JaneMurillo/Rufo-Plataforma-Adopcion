@@ -1,16 +1,64 @@
-# 🐾 RUFO: plataforma de adopción de mascotas
+# 🐾 RUFO: Rescued and Unidentified Fluffy Object
 
-Aplicación web full stack para administrar un albergue de animales: da a conocer a las mascotas en adopción, recibe y da seguimiento a las solicitudes, y ofrece paneles internos para el personal y la administración.
+Plataforma web full stack para la adopción responsable de perros y la gestión interna de albergues. Responde a la sobrepoblación de perros sin hogar en Guadalajara, Jalisco, y recomienda mascotas según las preferencias de cada adoptante.
 
-Se desarrolló en equipo como proyecto modular universitario para el albergue **Patitas de la Calle**.
+Es un proyecto modular universitario del Centro Universitario de Ciencias Exactas e Ingenierías (CUCEI, UdeG), desarrollado en equipo junto con el albergue **Patitas de la Calle**.
+
+📄 **[Leer el documento del proyecto (PDF)](docs/RUFO-2024A.pdf)**
 
 ![Página de inicio](docs/screenshots/inicio.png)
+
+> [!NOTE]
+> **Qué código contiene este repositorio:** una versión anterior de la aplicación, con el frontend y los servicios Express. El sistema de recomendación, TypeORM, Docker y el despliegue en la nube pertenecen a la versión final (2024A), que está en un repositorio privado del equipo. Esas partes se describen aquí y en el documento, pero su código no está publicado en este repositorio.
+
+## Mi participación
+
+### ⭐ Aportación principal: Módulo II, Justificación de Sistemas Inteligentes
+
+Estuve a cargo del módulo de sistemas inteligentes, que incorpora al proyecto un sistema de recomendación de mascotas:
+
+- El módulo comenzó con k-vecinos más cercanos (k-NN) y evolucionó a similitud de coseno para evaluar mejor la afinidad entre las preferencias del usuario y las características de cada perro.
+- Las recomendaciones consideran sexo, talla, edad y personalidad.
+- Los resultados se presentan como "Matches" con los 25 perros más compatibles.
+
+### Otras aportaciones al frontend
+
+- Interfaz de recomendaciones
+- Páginas internas y menús para administradores, personal y adoptantes
+- Pantallas de "Mi cuenta" para cada tipo de usuario
+- Páginas de reportes de administración
+- Botones de agregar, modificar y eliminar en las tablas de gestión
+- Ajustes de la interfaz para distintos tamaños de pantalla
+
+## Sistema de recomendación
+
+1. El usuario abre "Recomendar" en la sección de adopción y elige sus preferencias: sexo, talla, edad y tres o más rasgos de personalidad.
+2. Esas preferencias se convierten en un vector.
+3. La similitud de coseno compara ese vector con el de cada perro en la base de datos:
+
+   $$\text{similitud} = \cos(\theta) = \frac{A \cdot B}{\|A\|\,\|B\|}$$
+
+4. Los resultados se ordenan de mayor a menor similitud, donde un valor más cercano a 1 indica mayor compatibilidad.
+
+**Rasgos de personalidad:** activo, amigable, amoroso, juguetón, obediente, protector, sociable, tierno, tímido y tranquilo.
+
+| Selección de preferencias | Matches mostrados al usuario |
+| --- | --- |
+| ![Selección de preferencias](docs/figuras/seleccion-preferencias.png) | ![Resultados de la recomendación](docs/figuras/resultados-recomendacion.png) |
+
+## Módulos del proyecto
+
+| Módulo | Enfoque | Contenido |
+| --- | --- | --- |
+| I | Arquitectura y programación de sistemas | Node.js, React, PostgreSQL, Scrum y modelado del sistema |
+| **II** | **Sistemas inteligentes** | **Recomendación con k-NN y similitud de coseno** |
+| III | Sistemas distribuidos | Docker, modelo cliente-servidor y microservicios en Google Cloud |
 
 ## Funcionalidades
 
 **Sitio público**
 - Catálogo de mascotas con búsqueda, filtros y paginación
-- Formulario de solicitud de adopción
+- Solicitud de adopción en línea
 - Secciones de donaciones, eventos, voluntariado y acerca de nosotros
 
 **Cuentas y acceso**
@@ -25,19 +73,31 @@ Se desarrolló en equipo como proyecto modular universitario para el albergue **
 | --- | --- |
 | ![Catálogo](docs/screenshots/adopta.png) | ![Reportes](docs/screenshots/admin-reportes.png) |
 
-> Las capturas se tomaron sin el backend conectado, por lo que el catálogo aparece sin mascotas.
+> Estas dos capturas se tomaron de este código sin el backend conectado, por lo que el catálogo aparece sin mascotas.
 
 ## Tecnologías
 
-| Área | Herramientas |
-| --- | --- |
-| Frontend | React 17, React Router 6, React Table, Axios, CSS |
-| Backend | Node.js, Express |
-| Base de datos | PostgreSQL, pg-promise |
-| Autenticación | Passport (local, JWT, Google OAuth 2.0, Facebook) |
-| Servicios | Nodemailer con Gmail OAuth2, excel4node |
+| Área | Herramientas | Versión |
+| --- | --- | --- |
+| Frontend | React, React Router, React Table, Axios, CSS | Ambas |
+| Backend | Node.js, Express | Ambas |
+| Base de datos | PostgreSQL | Ambas |
+| Autenticación | Passport (local, JWT, Google OAuth 2.0, Facebook) | Este repositorio |
+| Servicios | Nodemailer con Gmail OAuth2, excel4node | Este repositorio |
+| Inteligencia artificial | k-NN, similitud de coseno | Final |
+| Migraciones | TypeORM | Final |
+| Infraestructura | Docker, Docker Compose, Google Cloud | Final |
+| Diseño y gestión | Figma, Scrum | Ambas |
 
 ## Arquitectura
+
+### Versión final (2024A)
+
+Cuatro contenedores Docker, orquestados con Docker Compose en una máquina virtual Debian de Google Cloud: servidor web, API con el algoritmo, base de datos PostgreSQL y ORM.
+
+![Arquitectura de la versión final](docs/figuras/arquitectura.png)
+
+### Código de este repositorio
 
 El frontend consume tres servicios Express independientes:
 
@@ -56,10 +116,19 @@ flowchart LR
 ├── public/          # Archivos estáticos
 ├── backend-tests/   # API principal: mascotas, usuarios, sesión, solicitudes y donativos
 ├── email-api/       # Envío de correos
-└── excel_api/       # Generación de reportes en Excel
+├── excel_api/       # Generación de reportes en Excel
+└── docs/            # Documento del proyecto, figuras y capturas
 ```
 
+## Metodología
+
+El equipo trabajó con Scrum, con sprints, reuniones semanales de seguimiento y un tablero de tareas. Los errores se registraban como tickets de prioridad baja, media o alta.
+
+El diseño partió de mapas de empatía para rescatistas, adoptantes y personal, y de prototipos en Figma. El sistema se modeló con diagramas de casos de uso, entidad-relación y de flujo. El detalle está en el [documento del proyecto](docs/RUFO-2024A.pdf).
+
 ## Ejecución local
+
+Estos pasos corresponden al código de este repositorio.
 
 **Requisitos:** Node.js 18 y PostgreSQL.
 
@@ -86,26 +155,24 @@ flowchart LR
    npm start
    ```
 
-> El esquema SQL de la base de datos todavía no está incluido en este repositorio, así que necesitas crear las tablas para usar las funciones que dependen del backend.
-
-## Mi participación
-
-Mis aportaciones se concentraron en el frontend:
-
-- Páginas internas y menús para administradores, personal y adoptantes
-- Pantallas de "Mi cuenta" para cada tipo de usuario
-- Páginas de reportes de administración
-- Botones de agregar, modificar y eliminar en las tablas de gestión
-- Ajustes de la interfaz para distintos tamaños de pantalla
+> Este repositorio no incluye el esquema SQL, así que necesitas crear las tablas para usar las funciones que dependen del backend.
 
 ## Mejoras pendientes
 
+**En el código de este repositorio**
 - Sustituir MD5 por bcrypt o Argon2 para guardar las contraseñas
 - Proteger las rutas internas también en el frontend
 - Centralizar las URL de los servicios, ahora escritas para `localhost`
-- Agregar el esquema SQL, pruebas automatizadas y Docker
+- Agregar el esquema SQL y pruebas automatizadas
 - Actualizar dependencias, entre ellas `react-scripts`
+
+**En el proyecto, según el documento**
+- Métodos de pago para donaciones
+- Apartado de eventos
+- Blog sobre el cuidado de las mascotas
 
 ## Sobre este repositorio
 
-Esta es una versión pública del proyecto. Se publica con un historial nuevo y sin credenciales, datos personales ni reportes generados. Los datos de cuenta que aparecen en la interfaz son de demostración.
+Esta es una versión pública del proyecto, con historial nuevo y sin credenciales, datos personales ni reportes generados. Los datos de cuenta que aparecen en la interfaz son de demostración.
+
+En el documento se omitieron los nombres de las demás personas del equipo y de los docentes, los correos, el enlace al repositorio privado y los identificadores de infraestructura.
