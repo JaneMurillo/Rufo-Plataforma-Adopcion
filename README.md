@@ -1,141 +1,139 @@
 # 🐾 RUFO: Rescued and Unidentified Fluffy Object
 
-Plataforma web full stack para la adopción responsable de perros y la gestión interna de albergues. Responde a la sobrepoblación de perros sin hogar en Guadalajara, Jalisco, y recomienda mascotas según las preferencias de cada adoptante.
+Full stack web platform for responsible dog adoption and internal animal shelter management. It responds to the overpopulation of homeless dogs in Guadalajara, Jalisco, and recommends pets based on each adopter's preferences.
 
-Es un proyecto modular universitario del Centro Universitario de Ciencias Exactas e Ingenierías (CUCEI, UdeG), desarrollado en equipo junto con el albergue **Patitas de la Calle**.
+This is a university capstone project from the University Center for Exact Sciences and Engineering (CUCEI, University of Guadalajara), developed as a team together with the **Patitas de la Calle** animal shelter.
 
-📄 **[Leer el documento del proyecto (PDF)](docs/RUFO-2024A.pdf)**
+📄 **[Read the project document (PDF, in Spanish)](docs/RUFO-2024A.pdf)**
 
-![Página de inicio](docs/screenshots/inicio.png)
+![Home page](docs/screenshots/inicio.png)
 
 > [!NOTE]
-> **Qué código contiene este repositorio:** una versión anterior de la aplicación, con el frontend y los servicios Express, y el código del sistema de recomendación de la versión final en [`recomendador/`](recomendador/). TypeORM, Docker y el despliegue en la nube pertenecen a la versión final (2024A), que está en un repositorio privado del equipo; esas partes se describen aquí y en el documento, pero su código no está publicado en este repositorio.
+> **What this repository contains:** an earlier version of the application, with the frontend and Express services, plus the recommendation system code from the final version in [`recomendador/`](recomendador/). TypeORM, Docker, and the cloud deployment belong to the final version (2024A), which is in a private team repository. Those parts are described here and in the document, but their code is not published in this repository.
 
-## Mi participación
+## My Contributions
 
-### ⭐ Aportación principal: Módulo II, Justificación de Sistemas Inteligentes
+### ⭐ Main contribution: Module II, Intelligent Systems
 
-Estuve a cargo del módulo de sistemas inteligentes, que incorpora al proyecto un sistema de recomendación de mascotas:
+I was in charge of the intelligent systems module, which adds a pet recommendation system to the project:
 
-- El módulo comenzó con k-vecinos más cercanos (k-NN) y evolucionó a similitud de coseno para evaluar mejor la afinidad entre las preferencias del usuario y las características de cada perro.
-- Las recomendaciones consideran sexo, talla, edad y personalidad.
-- Los resultados se presentan como "Matches" con los 25 perros más compatibles.
+- The module started with k-nearest neighbors (k-NN) and evolved to cosine similarity to better assess the match between a user's preferences and each dog's characteristics.
+- Recommendations take into account sex, size, age, and personality.
+- Results are presented as "Matches" with the 25 most compatible dogs.
 
-La separación del algoritmo como API la realizó el compañero responsable de la estructura del proyecto. El código está en [`recomendador/`](recomendador/).
+### Other frontend contributions
 
-### Otras aportaciones al frontend
+- Recommendations interface
+- Internal pages and menus for administrators, staff, and adopters
+- "My Account" screens for each user type
+- Admin report pages
+- Add, edit, and delete buttons in the management tables
+- Interface adjustments for different screen sizes
 
-- Interfaz de recomendaciones
-- Páginas internas y menús para administradores, personal y adoptantes
-- Pantallas de "Mi cuenta" para cada tipo de usuario
-- Páginas de reportes de administración
-- Botones de agregar, modificar y eliminar en las tablas de gestión
-- Ajustes de la interfaz para distintos tamaños de pantalla
+## Recommendation System
 
-## Sistema de recomendación
+1. The user opens "Recommend" in the adoption section and chooses their preferences: sex, size, age, and three or more personality traits.
+2. Those preferences are converted into a vector.
+3. Cosine similarity compares that vector with the vector of each dog in the database:
 
-1. El usuario abre "Recomendar" en la sección de adopción y elige sus preferencias: sexo, talla, edad y tres o más rasgos de personalidad.
-2. Esas preferencias se convierten en un vector.
-3. La similitud de coseno compara ese vector con el de cada perro en la base de datos:
+   $$\text{similarity} = \cos(\theta) = \frac{A \cdot B}{\|A\|\,\|B\|}$$
 
-   $$\text{similitud} = \cos(\theta) = \frac{A \cdot B}{\|A\|\,\|B\|}$$
+4. Results are sorted from highest to lowest similarity, where a value closer to 1 means greater compatibility.
 
-4. Los resultados se ordenan de mayor a menor similitud, donde un valor más cercano a 1 indica mayor compatibilidad.
+**Personality traits:** active, friendly, loving, playful, obedient, protective, sociable, sweet, shy, and calm.
 
-**Rasgos de personalidad:** activo, amigable, amoroso, juguetón, obediente, protector, sociable, tierno, tímido y tranquilo.
-
-| Selección de preferencias | Matches mostrados al usuario |
+| Choosing preferences | Matches shown to the user |
 | --- | --- |
-| ![Selección de preferencias](docs/figuras/seleccion-preferencias.png) | ![Resultados de la recomendación](docs/figuras/resultados-recomendacion.png) |
+| ![Choosing preferences](docs/figuras/seleccion-preferencias.png) | ![Recommendation results](docs/figuras/resultados-recomendacion.png) |
 
-## Módulos del proyecto
+## Project Modules
 
-| Módulo | Enfoque | Contenido |
+| Module | Focus | Content |
 | --- | --- | --- |
-| I | Arquitectura y programación de sistemas | Node.js, React, PostgreSQL, Scrum y modelado del sistema |
-| **II** | **Sistemas inteligentes** | **Recomendación con k-NN y similitud de coseno** |
-| III | Sistemas distribuidos | Docker, modelo cliente-servidor y microservicios en Google Cloud |
+| I | Architecture and systems programming | Node.js, React, PostgreSQL, Scrum, and system modeling |
+| **II** | **Intelligent systems** | **Recommendation with k-NN and cosine similarity** |
+| III | Distributed systems | Docker, client-server model, and microservices on Google Cloud |
 
-## Funcionalidades
+## Features
 
-**Sitio público**
-- Catálogo de mascotas con búsqueda, filtros y paginación
-- Solicitud de adopción en línea
-- Secciones de donaciones, eventos, voluntariado y acerca de nosotros
+**Public site**
+- Pet catalog with search, filters, and pagination
+- Online adoption application
+- Donations, events, volunteering, and about us sections
 
-**Cuentas y acceso**
-- Registro e inicio de sesión con correo y contraseña, Google o Facebook
-- Sesiones con JWT y tres tipos de cuenta: administrador, personal y adoptante
+**Accounts and access**
+- Sign-up and login with email and password, Google, or Facebook
+- JWT sessions and three account types: administrator, staff, and adopter
 
-**Paneles internos**
-- Gestión de mascotas, solicitudes, donativos y usuarios
-- Reportes descargables en Excel de mascotas, solicitudes y adoptantes
+**Internal dashboards**
+- Management of pets, applications, donations, and users
+- Downloadable Excel reports on pets, applications, and adopters
 
-| Catálogo de adopción | Reportes de administración |
+| Adoption catalog | Admin reports |
 | --- | --- |
-| ![Catálogo](docs/screenshots/adopta.png) | ![Reportes](docs/screenshots/admin-reportes.png) |
+| ![Catalog](docs/screenshots/adopta.png) | ![Reports](docs/screenshots/admin-reportes.png) |
 
-> Estas dos capturas se tomaron de este código sin el backend conectado, por lo que el catálogo aparece sin mascotas.
+> These two screenshots were taken from this code without the backend connected, so the catalog appears without pets.
 
-## Tecnologías
+## Tech Stack
 
-| Área | Herramientas | Versión |
+| Area | Tools | Version |
 | --- | --- | --- |
-| Frontend | React, React Router, React Table, Axios, CSS | Ambas |
-| Backend | Node.js, Express | Ambas |
-| Base de datos | PostgreSQL | Ambas |
-| Autenticación | Passport (local, JWT, Google OAuth 2.0, Facebook) | Este repositorio |
-| Servicios | Nodemailer con Gmail OAuth2, excel4node | Este repositorio |
-| Inteligencia artificial | Similitud de coseno, k-NN con scikit-learn y pandas, Flask | Final, con el código en `recomendador/` |
-| Migraciones | TypeORM | Final |
-| Infraestructura | Docker, Docker Compose, Google Cloud | Final |
-| Diseño y gestión | Figma, Scrum | Ambas |
+| Frontend | React, React Router, React Table, Axios, CSS | Both |
+| Backend | Node.js, Express | Both |
+| Database | PostgreSQL | Both |
+| Authentication | Passport (local, JWT, Google OAuth 2.0, Facebook) | This repository |
+| Services | Nodemailer with Gmail OAuth2, excel4node | This repository |
+| Artificial intelligence | Cosine similarity, k-NN with scikit-learn and pandas, Flask | Final, with code in `recomendador/` |
+| Migrations | TypeORM | Final |
+| Infrastructure | Docker, Docker Compose, Google Cloud | Final |
+| Design and management | Figma, Scrum | Both |
 
-## Arquitectura
+## Architecture
 
-### Versión final (2024A)
+### Final version (2024A)
 
-Cuatro contenedores Docker, orquestados con Docker Compose en una máquina virtual Debian de Google Cloud: servidor web, API con el algoritmo, base de datos PostgreSQL y ORM.
+Four Docker containers, orchestrated with Docker Compose on a Debian virtual machine on Google Cloud: web server, API with the algorithm, PostgreSQL database, and ORM.
 
-![Arquitectura de la versión final](docs/figuras/arquitectura.png)
+![Final version architecture](docs/figuras/arquitectura.png)
 
-### Código de este repositorio
+### Code in this repository
 
-El frontend consume tres servicios Express independientes:
+The frontend consumes three independent Express services:
 
 ```mermaid
 flowchart LR
-    A[Frontend React<br/>:3000] --> B[API principal<br/>:5000]
-    A --> C[API de correo<br/>:5001]
-    A --> D[API de reportes<br/>:5002]
+    A[React frontend<br/>:3000] --> B[Main API<br/>:5000]
+    A --> C[Email API<br/>:5001]
+    A --> D[Reports API<br/>:5002]
     B --> E[(PostgreSQL)]
     D --> E
     C --> F[Gmail]
 ```
 
 ```text
-├── src/             # Frontend: páginas públicas, paneles internos y componentes
-├── public/          # Archivos estáticos
-├── backend-tests/   # API principal: mascotas, usuarios, sesión, solicitudes y donativos
-├── email-api/       # Envío de correos
-├── excel_api/       # Generación de reportes en Excel
-├── recomendador/    # Sistema de recomendación de la versión final
-└── docs/            # Documento del proyecto, figuras y capturas
+├── src/             # Frontend: public pages, internal dashboards, and components
+├── public/          # Static files
+├── backend-tests/   # Main API: pets, users, sessions, applications, and donations
+├── email-api/       # Email delivery
+├── excel_api/       # Excel report generation
+├── recomendador/    # Recommendation system from the final version
+└── docs/            # Project document, figures, and screenshots
 ```
 
-## Metodología
+## Methodology
 
-El equipo trabajó con Scrum, con sprints, reuniones semanales de seguimiento y un tablero de tareas. Los errores se registraban como tickets de prioridad baja, media o alta.
+The team worked with Scrum, using sprints, weekly follow-up meetings, and a task board. Bugs were logged as low, medium, or high priority tickets.
 
-El diseño partió de mapas de empatía para rescatistas, adoptantes y personal, y de prototipos en Figma. El sistema se modeló con diagramas de casos de uso, entidad-relación y de flujo. El detalle está en el [documento del proyecto](docs/RUFO-2024A.pdf).
+The design started from empathy maps for rescuers, adopters, and staff, along with Figma prototypes. The system was modeled with use case, entity-relationship, and flow diagrams. Details are in the [project document](docs/RUFO-2024A.pdf).
 
-## Ejecución local
+## Running Locally
 
-Estos pasos corresponden al código de este repositorio.
+These steps apply to the code in this repository.
 
-**Requisitos:** Node.js 18 y PostgreSQL.
+**Requirements:** Node.js 18 and PostgreSQL.
 
-1. Crea un archivo `.env` en cada servicio a partir de su plantilla y completa tus valores:
+1. Create a `.env` file for each service from its template and fill in your values:
 
    ```bash
    cp backend-tests/.env.example backend-tests/.env
@@ -143,7 +141,7 @@ Estos pasos corresponden al código de este repositorio.
    cp excel_api/.env.example excel_api/.env
    ```
 
-2. Inicia cada servicio en su propia terminal:
+2. Start each service in its own terminal:
 
    ```bash
    cd backend-tests && npm install && npm start
@@ -151,29 +149,29 @@ Estos pasos corresponden al código de este repositorio.
    cd excel_api && npm install && npm start
    ```
 
-3. Inicia el frontend desde la raíz del proyecto y abre <http://localhost:3000>:
+3. Start the frontend from the project root and open <http://localhost:3000>:
 
    ```bash
    npm install
    npm start
    ```
 
-> Este repositorio no incluye el esquema SQL, así que necesitas crear las tablas para usar las funciones que dependen del backend.
+> This repository does not include the SQL schema, so you need to create the tables to use the features that depend on the backend.
 
-## Mejoras pendientes
+## Planned Improvements
 
-**En el código de este repositorio**
-- Sustituir MD5 por bcrypt o Argon2 para guardar las contraseñas
-- Proteger las rutas internas también en el frontend
-- Centralizar las URL de los servicios, ahora escritas para `localhost`
-- Agregar el esquema SQL y pruebas automatizadas
-- Actualizar dependencias, entre ellas `react-scripts`
+**In this repository's code**
+- Replace MD5 with bcrypt or Argon2 for password storage
+- Also protect internal routes on the frontend
+- Centralize service URLs, currently written for `localhost`
+- Add the SQL schema and automated tests
+- Update dependencies, including `react-scripts`
 
-**En el proyecto, según el documento**
-- Métodos de pago para donaciones
-- Apartado de eventos
-- Blog sobre el cuidado de las mascotas
+**In the project, according to the document**
+- Payment methods for donations
+- Events section
+- Blog about pet care
 
-## Sobre este repositorio
+## About This Repository
 
-Esta es una versión pública del proyecto, con historial nuevo y sin credenciales ni reportes generados. Los datos de cuenta que aparecen en la interfaz son de demostración. El documento del proyecto se incluye en su versión original, con la autoría del equipo.
+This is a public version of the project, with a new history and without credentials or generated reports. The account details shown in the interface are for demonstration purposes.

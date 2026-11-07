@@ -1,33 +1,33 @@
-# Sistema de recomendación
+# Recommendation System
 
-Código del Módulo II de RUFO, tomado de la versión final del proyecto. Recomienda perros en adopción comparando las preferencias del usuario con las características de cada mascota.
+Code for RUFO's Module II, taken from the final version of the project. It recommends adoptable dogs by comparing a user's preferences with each pet's characteristics.
 
-La explicación completa está en el [documento del proyecto](../docs/RUFO-2024A.pdf), en la sección "Modulo II Justificación de Sistemas Inteligentes".
+The full explanation is in the [project document (in Spanish)](../docs/RUFO-2024A.pdf), in the section "Modulo II Justificación de Sistemas Inteligentes".
 
-## Contenido
+## Contents
 
-| Carpeta | Archivos | Qué contiene |
+| Folder | Files | What it contains |
 | --- | --- | --- |
-| `coseno/` | `main.js`, `knntest2.csv` | Similitud de coseno, el método elegido, en un script independiente |
-| `knn/` | `knn.py`, `knndataset.csv` | Prototipo inicial con k-vecinos más cercanos |
-| `knn/` | `api_knn.py` | Prototipo de API en Flask para el modelo k-NN |
-| `integracion/` | `mascotas-recomendar.js`, `pet-getPetsAInternal.js` | Extractos del backend: la ruta `POST /mascotas/recomendar` y la consulta de mascotas |
-| `interfaz/` | `Recomend.jsx`, `recomendcontent.jsx` | Interfaz en React para elegir preferencias y ver resultados |
+| `coseno/` | `main.js`, `knntest2.csv` | Cosine similarity, the chosen method, as a standalone script |
+| `knn/` | `knn.py`, `knndataset.csv` | Initial k-nearest neighbors prototype |
+| `knn/` | `api_knn.py` | Flask API prototype for the k-NN model |
+| `integracion/` | `mascotas-recomendar.js`, `pet-getPetsAInternal.js` | Backend excerpts: the `POST /mascotas/recomendar` route and the pet query |
+| `interfaz/` | `Recomend.jsx`, `recomendcontent.jsx` | React interface for choosing preferences and viewing results |
 
-## Vector de características
+## Feature Vector
 
-Cada perro y cada perfil de usuario se representan con 13 valores:
+Each dog and each user profile is represented by 13 values:
 
-| Grupo | Columnas |
+| Group | Columns |
 | --- | --- |
-| Datos generales | Sexo, Talla, Edad |
-| Personalidad (0 o 1) | Activo, Amigable, Cariñoso, Juguetón, Obediente, Protector, Sociable, Tierno, Tímido, Tranquilo |
+| General data | Sexo (sex), Talla (size), Edad (age) |
+| Personality (0 or 1) | Activo (active), Amigable (friendly), Carinoso (loving), Jugueton (playful), Obediente (obedient), Protector (protective), Sociable (sociable), Tierno (sweet), Timido (shy), Tranquilo (calm) |
 
-## Ejecutar los scripts
+## Running the Scripts
 
-El perfil de usuario está definido dentro de cada script como ejemplo.
+The user profile is defined inside each script as an example.
 
-**Similitud de coseno**
+**Cosine similarity**
 
 ```bash
 cd coseno
@@ -43,8 +43,8 @@ pip install scikit-learn pandas
 python knn.py
 ```
 
-## Limitaciones
+## Limitations
 
-- `integracion/` e `interfaz/` son material de consulta. Dependen del resto de la versión final, como la base de datos y otros componentes, y no están conectados a la aplicación de este repositorio.
-- `api_knn.py` es un prototipo: responde con un perfil de usuario fijo y, al iniciar, consulta una URL de ejemplo.
-- Los conjuntos de datos solo contienen valores numéricos de características de mascotas.
+- `integracion/` and `interfaz/` are for reference. They depend on the rest of the final version, such as the database and other components, and are not connected to the application in this repository.
+- `api_knn.py` is a prototype: it responds with a fixed user profile and queries an example URL on startup.
+- The datasets contain only numeric values for pet characteristics.
